@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Complaints page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="complaints.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md">
+
+	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="main-navigation">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<!--<a class="nav-link" href="mainpage.html">Back</a>-->
+			</li>
+		</ul>
+	</div>
+</nav>
+<div class="jumbotron text-center">
+	<h1>&phone; VoizFonica</h1>
+	<h4>Complaints</h4>
+</div>
+<form method="POST" th:action="@{/complaints}" th:object="${complaints}">
+	<!--div style="margin:0 auto;width:75%;text-align:left"-->
+	<div>
+		<input type="checkbox" name="COMPLAINT" value="INTERNET" class="greyColor">
+		<label for="slow internet" class="radio_Label">Slow internet</label>
+
+
+    </div>
+
+	<div>
+		<input type="checkbox" name="COMPLAINT" value="INTERNET" class="greyColor">
+		<label for="slow internet" class="radio_Label">Transaction failed</label>
+
+	</div>
+
+
+	<div>
+		<input type="checkbox" name="COMPLAINT" value="SERVICE" class="greyColor">
+		<label for="services" class="radio_Label">No good service</label>
+	</div>
+	<div>
+		<h2>COMMENTS..</h2></div>
+	<div>
+<textarea rows="10" cols="20" name="comment" th:field="*{comp}" >
+	<span class="validationError"
+		  th:if="${#fields.hasErrors('comp')}"
+		  th:errors="*{comp}">error</span>
+</textarea></div>
+
+	<div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	<!--   <input type="submit"> -->
+</div>
+<footer class="page-footer">
+
+	<div class="footer-copyright text-center">© 2019 Voizfonica India. All Rights Reserved</div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

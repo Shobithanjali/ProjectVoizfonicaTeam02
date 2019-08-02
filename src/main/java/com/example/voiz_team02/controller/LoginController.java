@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/login")
+@SessionAttributes("login")
 public class LoginController{
     private RegisterRepository repo;
 
@@ -30,15 +31,16 @@ public class LoginController{
 
 
     @PostMapping
-    public String processLogin(@Valid Login login, Errors errors,Model model) {
+    public String processLogin(@Valid @ModelAttribute Login login, Errors errors,Model model) {
         if (errors.hasErrors()) {
             return "login";
         }else {
             ArrayList<Register> user = repo.findByEmailAddressAndPassword(login.getEmailAddress(), login.getPassword());
+            login.setEmailAddress(login.getEmailAddress());
             if (user.isEmpty()) {
                 return "login";
             }
-            return "dashboard";
+            return "redirect:/dashboard";
 
         }
     }

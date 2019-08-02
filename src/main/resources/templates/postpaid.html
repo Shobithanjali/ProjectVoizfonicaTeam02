@@ -30,22 +30,17 @@
 </div>
 
 
-<div class="container features">
+<div class="container">
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h1 class="feature-title">Rs. 249</h1>
-            <img th:src="@{images/column-1.jpg}" class="img-fluid">
-            <a href="payment" class="btn btn-info" role="button">BUY</a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h1 class="feature-title">Rs.449</h1>
-            <img th:src="@{images/column-2.jpg}" class="img-fluid">
+        <div class="col-md-4" th:each="property : ${plans}">
+            <div class="head">
+<img th:src="@{images/postpaid.jpg}" class="img-fluid">
+                <li><span th:text="${property.scheme}"></span>Amount</li>
+                <ul> <span th:text="${property.value}"></span>Value</ul>
+                <ul> <span th:text="${property.benefits}"></span>Benefits</ul>
+            </div>
 
-            <a href="payment" class="btn btn-info" role="button">BUY</a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <h1 class="feature-title">Rs.749</h1>
-            <img th:src="@{images/column-3.jpg}" class="img-fluid">
+
             <a href="payment" class="btn btn-info" role="button">BUY</a>
         </div>
     </div>

@@ -38,7 +38,7 @@ public class RegisterController {
             return "register";
         }
         register_repo.save(register);
-        return "redirect:/";
+        return "redirect:/dashboard";
     }
 
 }

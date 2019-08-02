@@ -15,10 +15,11 @@ public class Login {
 
 
     @NotBlank
-    @Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\.\\-]+)\\.([a-zA-Z]{2,5})$")
+  /*  @Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\.\\-]+)\\.([a-zA-Z]{2,5})$ ")*/
+
     private  String emailAddress;
     @NotBlank
-    @Size(min = 6,message = "minimum 6 characters")
+    @Size(min=6, message = "invalid password")
     private String password;
 
     public String getEmailAddress() {

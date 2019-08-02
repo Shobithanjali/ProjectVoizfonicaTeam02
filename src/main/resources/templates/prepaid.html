@@ -30,7 +30,7 @@
 </div>
 
 
-<div class="container features">
+<<!--div class="container features">
     <div class="row">
         <div class="border col-lg-3 col-md-3 col-sm-9">
             <h1 class="feature-title">Rs. 200</h1>
@@ -49,6 +49,20 @@
         </div>
         <div class="border col-lg-3 col-md-3 col-sm-9">
             <h1 class="feature-title">Rs.350</h1>
+
+            <a href="payment" class="btn btn-info" role="button">BUY</a>
+        </div>
+    </div>
+</div>-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" th:each="property : ${plans}">
+            <div class="head">
+                <li><span th:text="${property.scheme}"></span>Scheme</li>
+
+
+            </div>
+
 
             <a href="payment" class="btn btn-info" role="button">BUY</a>
         </div>

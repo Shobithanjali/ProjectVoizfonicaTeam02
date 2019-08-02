@@ -1,0 +1,32 @@
+.feature-title {
+	color: #000000;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-left: 300px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.footer-copyright{
+	padding: 300px;
+}
+.navbar {
+	background: #D3D3D3;
+}
+
+.nav-link,
+.navbar-brand {
+	color: #fff;
+	cursor: pointer;
+}
+
+.nav-link {
+	margin-left: 3em !important;
+}
+
+.nav-link:hover {
+	color: #000000;
+}
+
+.navbar-collapse {
+	justify-content: flex-end;
+}
