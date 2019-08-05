@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@RequestMapping("/dashboard")
+@RequestMapping()
 @SessionAttributes("login")
 public class DashboardController {
-    @GetMapping
+    @GetMapping("/dashboard")
+    public String show2(Model model){
+        return "dashboard";
+    }
+    @GetMapping("/login/dashboard")
     public String show(Model model, @SessionAttribute("login") Login login){
         model.addAttribute("login",login.getEmailAddress());
         return "dashboard";

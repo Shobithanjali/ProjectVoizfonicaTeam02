@@ -24,7 +24,7 @@ public class regstration {
 
 
 
-    @Size(min = 30,message = "Atleast 30 characters")
+    @Size(min = 10,message = "Atleast 30 characters")
     private String address;
 
 

@@ -18,9 +18,9 @@
     </button>
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
-            <li class="nav-item">
+           <!-- <li class="nav-item">
                 <a class="nav-link" th:href="dashboard">Back to mainmenu</a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </nav>
@@ -31,7 +31,18 @@
 <div class="container features">
     <div class="row">
 
-        <h3 class="feature-title">Your new connection is successfully generated</h3>
+        <tr th:each="newconn:${regstration}">
+            <td th:text="${newconn.firstname}">First Name:</td><br>
+            <td th:text="${newconn.lastname}">Last Name:</td><br>
+            <td th:text="${newconn.address}">Address:</td><br>
+            <td th:text="${newconn.state}">State:</td><br>
+            <td th:text="${newconn.zip}">Zip:</td><br>
+            <td th:text="${newconn.aadhar}">Aadhar:</td><br>
+            <td th:text="${newconn.email}">Email:</td><br>
+
+
+        </tr>
+        <h4 class="feature-title">Your new connection is successfully generated</h4>
     </div>
 </div>
 

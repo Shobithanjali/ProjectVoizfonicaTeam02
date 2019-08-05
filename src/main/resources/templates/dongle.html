@@ -38,8 +38,8 @@
            <li> <span th:text="${property.benefits}"></span>Benefits</li>
             </div>
 
-
-            <a href="payment" class="btn btn-info" role="button">BUY</a>
+            <td><a th:href="@{'/dongle/'+${property.id}}">Recharge</a></td>
+            <!--<a href="payment" class="btn btn-info" role="button">BUY</a>-->
         </div>
     </div>
 </div>

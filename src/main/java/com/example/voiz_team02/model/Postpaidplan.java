@@ -20,10 +20,16 @@ import lombok.AccessLevel;
 public class Postpaidplan {
     @org.springframework.data.annotation.Id
     private String Id;
-    private final String scheme;
-    private final String value;
-    private final String benefits;
+    private  String scheme;
+    private  String value;
+    private  String benefits;
+    public Postpaidplan(String Id, String scheme, String value, String benefits) {
+        this.Id = Id;
 
+        this.scheme = scheme;
+        this.value=value;
+        this.benefits=benefits;
+    }
 
 
 }

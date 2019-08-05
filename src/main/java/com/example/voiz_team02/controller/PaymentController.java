@@ -1,7 +1,9 @@
 package com.example.voiz_team02.controller;
 
 
+import com.example.voiz_team02.data.OrderRepository;
 import com.example.voiz_team02.data.PaymentRepository;
+import com.example.voiz_team02.model.Order;
 import com.example.voiz_team02.model.Payment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,13 +14,15 @@ import org.springframework.web.bind.support.SessionStatus;
 import javax.validation.Valid;
 @Controller
 @RequestMapping("/payment")
-@SessionAttributes("payment")
+@SessionAttributes({"payment","order"})
 
 public class PaymentController {
-    private PaymentRepository payRepo;
+    private final PaymentRepository payRepo;
+    private final OrderRepository orderRepo;
 
-    public PaymentController(PaymentRepository payRepo) {
+    public PaymentController(PaymentRepository payRepo, OrderRepository orderRepo) {
         this.payRepo = payRepo;
+        this.orderRepo=orderRepo;
     }
 
     @ModelAttribute
@@ -28,11 +32,13 @@ public class PaymentController {
         return "payment";
     }
     @PostMapping
-    public String processPayment(@Valid Payment payment, Errors errors, SessionStatus sessionStatus) {
+    public String processPayment(@Valid Payment payment, Errors errors, @ModelAttribute Order order, SessionStatus sessionStatus, Model model) {
         if (errors.hasErrors()) {
             return "payment";
         }
+        order.setPayment(payment);
         payRepo.save(payment);
+        orderRepo.save(order);
         sessionStatus.setComplete();
         return "redirect:/success";
     }

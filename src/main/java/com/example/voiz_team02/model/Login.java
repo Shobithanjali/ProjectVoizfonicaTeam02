@@ -22,6 +22,10 @@ public class Login {
     @Size(min=6, message = "invalid password")
     private String password;
 
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
     public String getEmailAddress() {
         return emailAddress;
     }

@@ -59,10 +59,11 @@
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="">Welcome <b th:text="${login}"></b></a>
+            <a class="navbar-brand" href="">Welcome <b th:text="${login.emailAddress}"></b></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
+
 
         </div>
     </div>
@@ -88,7 +89,7 @@
                         <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Buy</a></li>
                         <!--li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li-->
                         <li role="separator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                        <li><a href="../"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -110,12 +111,12 @@
                         <span>Complaints</span>
                     </a>
                 </li>
-                <li>
+              <!--  <li>
                     <a href="">
-                        <!--i class="material-icons">layers</i-->
+                        &lt;!&ndash;i class="material-icons">layers</i&ndash;&gt;
                         <span>Bills</span>
                     </a>
-                </li>
+                </li>-->
 
                 <li>
                     <a th:href="regstration">

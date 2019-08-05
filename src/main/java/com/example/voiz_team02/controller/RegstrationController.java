@@ -20,6 +20,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/regstration")
 public class RegstrationController {
+    @Autowired
     private Regstrationrepo regstrationrepo;
     /*public String show_register(Model model){
          List<Register> mylist= Arrays.asList(
@@ -30,16 +31,12 @@ public class RegstrationController {
          return "register";
 
      }*/
-    @Autowired
-    public RegstrationController(Regstrationrepo regstrationrepo)
+
+   /* public RegstrationController(Regstrationrepo regstrationrepo)
     {
         this.regstrationrepo=regstrationrepo;
-    }
-    @ModelAttribute(name="regstration")
-    public regstration register()
-    {
-        return new regstration();
-    }
+    }*/
+
     @GetMapping
     public String show_register(Model model){
         model.addAttribute("regstration",new regstration());
@@ -60,13 +57,11 @@ public String showRegister(){
         else
         {
             regstrationrepo.save(regstration);
-            model.addAttribute("regstration",new regstration());
+
             return "result";
         }
 
-        // Save the taco design...
-        // We'll do this in chapter 3
-        /* log.info("Processing design: " + register);*/
+
 
 
     }

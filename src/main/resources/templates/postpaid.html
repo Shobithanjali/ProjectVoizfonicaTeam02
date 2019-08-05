@@ -38,10 +38,11 @@
                 <li><span th:text="${property.scheme}"></span>Amount</li>
                 <ul> <span th:text="${property.value}"></span>Value</ul>
                 <ul> <span th:text="${property.benefits}"></span>Benefits</ul>
+
             </div>
 
-
-            <a href="payment" class="btn btn-info" role="button">BUY</a>
+            <td><a th:href="@{'/postpaid/'+${property.id}}">Recharge</a></td>
+          <!--  <a href="payment" class="btn btn-info" role="button">BUY</a>-->
         </div>
     </div>
 </div>
