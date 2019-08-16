@@ -30,6 +30,7 @@ html[dir="rtl"] .alert-dismissible {
 html[dir="rtl"] .dropdown-menu {
   right: 0;
   text-align: right;
+  color: black;
 }
 
 html[dir="rtl"] .checkbox label {
@@ -44,6 +45,7 @@ html[dir="rtl"] .btn-group > .btn:first-child:not(:last-child):not(.dropdown-tog
 html[dir="rtl"] .btn-group > .btn:last-child:not(:first-child),
 html[dir="rtl"] .btn-group > .dropdown-toggle:not(:first-child) {
   border-radius: 0.25rem 0 0 0.25rem;
+  color: black;
 }
 
 html[dir="rtl"] .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
@@ -146,6 +148,7 @@ html[dir="rtl"] .alert-dismissible .close {
 html[dir="rtl"] .dropdown-toggle::after {
   margin-right: .255em;
   margin-left: 0;
+  color: black;
 }
 
 html[dir="rtl"] .form-check-input {

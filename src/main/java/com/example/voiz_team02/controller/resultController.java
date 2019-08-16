@@ -9,12 +9,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 @RequestMapping("/result")
+@SessionAttributes("login")
 public class resultController {
     @Autowired
     private Regstrationrepo regstrationrepo;

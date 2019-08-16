@@ -20,7 +20,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/dongle")
-@SessionAttributes("order")
+@SessionAttributes({"login","order"})
 public class DongleController {
     @Autowired
     private OrderRepository orderRepo;

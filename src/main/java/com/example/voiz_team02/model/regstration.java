@@ -8,10 +8,17 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.lang.annotation.Documented;
+import java.util.Random;
 
 @Data
 @Document
 public class regstration {
+    public long rand=(long) (Math.random()*100000000+9872100000L);
+   /* Random random=new Random();
+    public int rand=random.nextInt(9000000)+1000000;
+    @NotBlank
+    @Digits(integer = 10,message = "invalid mobile no",fraction = 0)*/
+
     @Id
     private String id;
 

@@ -5,7 +5,7 @@ import com.example.voiz_team02.data.PostpaidRepositary;
 import com.example.voiz_team02.data.PrepaidRepository;
 import com.example.voiz_team02.data.Regstrationrepo;
 import com.example.voiz_team02.model.DonglePlans;
-import com.example.voiz_team02.model.Postpaidplan;
+import com.example.voiz_team02.model.PostpaidPlan;
 import com.example.voiz_team02.model.PrepaidPlans;
 import com.example.voiz_team02.model.regstration;
 import org.springframework.boot.CommandLineRunner;
@@ -28,15 +28,16 @@ public class VoizTeam02Application {
         repo2.deleteAll();
         repo3.deleteAll();
         return args -> {
-            repo.save(new DonglePlans("ABC", "RS 598 PER MONTH", "200GB"));
-            repo.save(new DonglePlans("DEF", "RS 748 PER MONTH", "300G"));
-            repo1.save(new PrepaidPlans("10", "RS 200 PER MONTH"));
-            repo1.save(new PrepaidPlans("11", "RS 250 PER MONTH"));
-            repo1.save(new PrepaidPlans("12", "RS 300 PER MONTH"));
-            repo1.save(new PrepaidPlans("13", "RS 350 PER MONTH"));
-            repo2.save(new Postpaidplan("plan1","Rs.249", "3G/4G - 75Gb","Local/Std Unlimited"));
-            repo2.save(new Postpaidplan("plan2", "Rs 449", "3G/4G - 125Gb", "Local/Std Unlimited"));
-            repo2.save(new Postpaidplan("plan3", "Rs 749", "3G/4G - 150Gb","Local/Std Unlimited"));
+            repo.save(new DonglePlans("ABC", "Dongle:RS 598/MONTH", "200GB"));
+            repo.save(new DonglePlans("DEF", "Dongle:RS 748/MONTH", "300GB"));
+            repo.save(new DonglePlans("PR01","Dongle Purchase","Warranty: 2 years"));
+            repo1.save(new PrepaidPlans("10", "Prepaid:RS 200/MONTH"));
+            repo1.save(new PrepaidPlans("11", "Prepaid:RS 250/MONTH"));
+            repo1.save(new PrepaidPlans("12", "Prepaid:RS 300/MONTH"));
+           /* repo1.save(new PrepaidPlans("13", "RS 350 PER MONTH"));*/
+            repo2.save(new PostpaidPlan("plan1","Postpaid:Rs.249", "3G/4G - 75Gb","Local/Std Unlimited"));
+            repo2.save(new PostpaidPlan("plan2", "Postpaid:Rs 449", "3G/4G - 125Gb", "Local/Std Unlimited"));
+            repo2.save(new PostpaidPlan("plan3", "Postpaid:Rs 749", "3G/4G - 150Gb","Local/Std Unlimited"));
             repo3.save(new regstration());
             repo3.save(new regstration());
             repo3.save(new regstration());

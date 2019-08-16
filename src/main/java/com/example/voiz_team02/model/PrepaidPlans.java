@@ -14,6 +14,21 @@ public class PrepaidPlans {
 
     private String scheme;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getScheme() {
+        return scheme;
+    }
+
+    public void setScheme(String scheme) {
+        this.scheme = scheme;
+    }
 
     public PrepaidPlans(String id, String scheme) {
         this.id = id;

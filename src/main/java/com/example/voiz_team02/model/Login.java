@@ -15,6 +15,7 @@ public class Login {
 
 
     @NotBlank
+    @Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\.\\-]+)\\.([a-zA-Z]{2,5})$", message="give us a valid emailid")
   /*  @Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\.\\-]+)\\.([a-zA-Z]{2,5})$ ")*/
 
     private  String emailAddress;

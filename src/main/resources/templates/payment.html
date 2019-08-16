@@ -10,6 +10,21 @@
     <link rel="stylesheet" type="text/css" th:href="@{css/demo.css}">
 </head>
 <body>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href=""></a>
+
+        </div>
+        <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
+             <ul class="nav navbar-nav navbar-right">
+
+
+         </div>-->
+    </div>
+</nav>
 <div class="container-fluid">
 
     <div class="creditCardForm">
@@ -58,12 +73,12 @@
                         <option value="12">December</option>
                     </select>
                     <select>
-                        <option value="16"> 2016</option>
-                        <option value="17"> 2017</option>
-                        <option value="18"> 2018</option>
-                        <option value="19"> 2019</option>
                         <option value="20"> 2020</option>
                         <option value="21"> 2021</option>
+                        <option value="22"> 2022</option>
+                        <option value="23"> 2023</option>
+                        <option value="24"> 2024</option>
+                        <option value="25"> 2025</option>
                     </select>
                 </div>
                 <div class="form-group" id="credit_cards">
@@ -74,7 +89,11 @@
                 <div class="form-group" id="pay-now">
                     <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>
                 </div>
+
             </form>
+        </div>
+        <div>
+            <a th:href="dashboard" onclick="alert('Your payment is cancelled')">Cancel Payment</a>
         </div>
     </div>
 

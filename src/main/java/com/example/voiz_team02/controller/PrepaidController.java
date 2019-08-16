@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/prepaid")
-@SessionAttributes("order")
+@SessionAttributes({"login","order"})
 public class PrepaidController{
     @Autowired
     private OrderRepository orderRepo;

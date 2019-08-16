@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
 
-    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{css/font-awesome.min.css}">
-    <link rel="stylesheet" th:href="@{css/animate.css}">
-    <link rel="stylesheet" th:href="@{css/overwrite.css}">
-    <link th:href="@{css/animate.min.css}" rel="stylesheet">
-    <link th:href="@{css/style.css}" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/overwrite.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/mark.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">VOIZFONICA</a>
+                <a class="navbar-brand" href="index.html">VOIZFONIC<img src="images/dar.png" width="40" height="40" align="right"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
@@ -45,7 +45,7 @@
 </header>
 
 <div class="slider">
-    <div id="about-slider">
+    <div id="about-slider" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators visible-xs">
             <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
@@ -60,10 +60,10 @@
                     <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <h2><span>VOIZFONICA</span></h2>
                     </div>
-                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <p>VoizFonica is a Mobile Network Operator and telephone company</p>
                     </div>
-                    <div  class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
+                    <div  class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <form class="form-inline">
                             <div class="form-group">
                                 <button type="getnow" name="Get Now" class="btn btn-primary btn-lg" required="required"><a th:href="@{login}">Log In</a></button>
@@ -82,10 +82,10 @@
                     <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
                         <h2>VOIZFONICA</h2>
                     </div>
-                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.3s">
+                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
                         <p>VoizFonica  is a company that is aware of the new challenges posed by today’s society</p>
                     </div>
-                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.6s">
+                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.3s">
                         <form class="form-inline">
                             <div class="form-group">
                                 <button type="getnow" name="purchase" class="btn btn-primary btn-lg" required="required"><a th:href="login">Log In</a></button>
@@ -103,10 +103,10 @@
                     <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <h2>VOIZFONICA</h2>
                     </div>
-                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <p>VoizFonica business is very technology dependent as company acts as a network service provider (NSP)  in mobile.</p>
                     </div>
-                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
+                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                         <form class="form-inline">
                             <div class="form-group">
                                 <button type="getnow" name="purchase" class="btn btn-primary btn-lg" required="required"><a th:href="login">Log In</a></button>
@@ -195,29 +195,29 @@
         <div class="row">
             <figure class="effect-chico">
                 <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                    <a href="img/work/1.png" class="flipLightBox">
+                    <a href="images/a.png" class="flipLightBox">
                         <img th:src="@{images/a.png}" class="img-responsive" alt="">
                     </a>
                 </div>
             </figure>
             <figure class="effect-chico">
                 <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                    <a href="img/work/2.jpg" class="flipLightBox">
+                    <a href="images/b.jpg" class="flipLightBox">
                         <img th:src="@{images/b.jpg}" class="img-responsive" alt="">
                     </a>
                 </div>
             </figure>
             <figure class="effect-chico">
                 <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-                    <a href="img/work/3.jpg" class="flipLightBox">
+                    <a href="images/c.jpg" class="flipLightBox">
                         <img th:src="@{images/c.jpg}" class="img-responsive" alt="">
                     </a>
                 </div>
             </figure>
             <figure class="effect-chico">
                 <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-                    <a href="img/work/4.jpg" class="flipLightBox">
-                        <img th:src="@{images/i.jpg}" class="img-responsive" alt="">
+                    <a href="images/f.jpg" class="flipLightBox">
+                        <img th:src="@{images/f.jpg}" class="img-responsive" alt="">
                     </a>
                 </div>
             </figure>
@@ -228,32 +228,32 @@
             <div class="row">
                 <figure class="effect-chico">
                     <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                        <a href="img/work/5.jpg" class="flipLightBox">
-                            <img th:src="@{images/e.jpg}" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                </figure>
-                <figure class="effect-chico">
-                    <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-                        <a href="img/work/6.jpg" class="flipLightBox">
-                            <img th:src="@{images/f.jpg}" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                </figure>
-                <figure class="effect-chico">
-                    <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-                        <a href="img/work/7.jpg" class="flipLightBox">
+                        <a href="images/g.jpeg" class="flipLightBox">
                             <img th:src="@{images/g.jpeg}" class="img-responsive" alt="">
                         </a>
                     </div>
                 </figure>
                 <figure class="effect-chico">
-                    <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-                        <a href="img/work/8.jpg" class="flipLightBox">
+                    <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+                        <a href="images/h.jpg" class="flipLightBox">
                             <img th:src="@{images/h.jpg}" class="img-responsive" alt="">
                         </a>
                     </div>
                 </figure>
+                <figure class="effect-chico">
+                    <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
+                        <a href="images/i.jpg" class="flipLightBox">
+                            <img th:src="@{images/i.jpg}" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </figure>
+               <!-- <figure class="effect-chico">
+                    <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
+                        <a href="img/work/8.jpg" class="flipLightBox">
+                            <img th:src="@{img/work/8.jpg}" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </figure>-->
             </div>
         </div>
     </div>
@@ -274,9 +274,14 @@
     </div>
 
 </div>
-
-</div>
-</div>
+<footer>
+    <div id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h3>Contact Us</h3>
+                <!--p>Fusce fermen tum neque a rutrum varius odio pede</p-->
+            </div>
+        </div>
 <div class="container">
     <div class="row">
         <div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.2s">
@@ -304,7 +309,7 @@
 </div>
 </div>
 
-<div class="container">
+<!--<div class="container">
     <div class="sub-footer">
         <div class="text-center">
             <div class="col-md-12">
@@ -314,8 +319,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="social-icon">
+</div>-->
+<!--<div class="social-icon">
     <div class="container">
         <div class="col-md-6 col-md-offset-3">
             <ul class="social-network">
@@ -329,7 +334,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>-->
 <div class="text-center">
     <div class="copyright">
         &copy;VOIZFONICA India. All Rights Reserved.
@@ -337,8 +342,10 @@
         </div>
     </div>
 </div>
+</footer>
+</body>
             <script th:src="@{js/jquery-2.1.1.min.js}"></script>
-
+           <!-- <script th:src="@{js/bootstrap.js}"></script>-->
             <script th:src="@{js/bootstrap.min.js}"></script>
             <script th:src="@{js/parallax.min.js}"></script>
             <script th:src="@{js/wow.min.js}"></script>
@@ -346,5 +353,5 @@
             <script type="text/javascript" th:src="@{js/fliplightbox.min.js}"></script>
             <script th:src="@{js/functions.js}"></script>
             <script th:src="@{js/contactform.js}"></script>
-</body>
+
 </html>

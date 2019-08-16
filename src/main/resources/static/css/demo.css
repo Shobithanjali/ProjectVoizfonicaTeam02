@@ -7,7 +7,7 @@
 body{
     font: normal 18px sans-serif;
     color: #333;
-    background-color: #eee;
+    background-color: #87cefa;
 }
 
 .container-fluid{
@@ -54,7 +54,9 @@ header a:hover{
     text-decoration: none;
     opacity: 1;
 }
-
+btn{
+    color: #0a6ebd;
+}
 @media (max-width: 850px) {
 
     header h3{
